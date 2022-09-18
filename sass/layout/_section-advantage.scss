@@ -1,0 +1,31 @@
+.svg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 120px;
+    width: 270px;
+    background: var(--white-bg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.adv-list {
+    display: flex;
+    column-gap: 30px;
+    padding-left: 0%;
+}
+
+.adv-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.title-mean {
+    color: var(--grey-colortext);
+    font-size: 14px;
+    line-height: 1.7;
+}
