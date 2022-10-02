@@ -19,13 +19,19 @@
 <header class="header">
     <div class="container headercontainer">
     <nav class="nav">
-        <a href="./index.html" class="logo">Web<span class="studio">Studio</span></a>
+        <a href="./index.html" class="logo header-logo">Web<span class="studio">Studio</span></a>
         <ul class="nav-list">
             <li><a href="./index.html" class="nav-item current" >Студія</a></li>
             <li><a href="./portfolio.html" class="nav-item">Портфоліо</a></li>
             <li><a href="#" class="nav-item">Контакти</a></li>
         </ul>
         </nav>
+        <button type="button" class="open-menu-mobile-btn" data-menu-open>
+            <svg class="open-menu-mobile-btn_icon" width="40" height="40">
+                <use href="./img/icons.svg#burger-menu"></use>
+            </svg>
+        </button>
+      
         <ul class="nav-contact">
             <li><a href="mailto:info@devstudio.com" class="contact-link"><svg class="contact-icon" width="16" height="12">
                 <use href="./img/icons.svg#icon-mail"></use>
@@ -34,45 +40,69 @@
                 <use href="./img/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a></li>
         </ul>  
+      </div>
+   <div class="mobile-menu" data-menu>
+    <div class="container mobile-menu__container">
+        <button class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="30" height="30">
+                <use href="./img/icons.svg#icon-vector"></use>
+            </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+        <ul class=" list mobile-menu__page-list">
+            <li><a href="./index.html" class="mobile-menu__list-item " >Студія</a></li>
+            <li><a href="./portfolio.html" class="mobile-menu__list-item">Портфоліо</a></li>
+            <li><a href="#" class="mobile-menu__list-item">Контакти</a></li>
+        </ul></nav>
+        <ul class=" list mobile-menu__contact">
+            <li><a href="mailto:info@devstudio.com"  class="mobile-menu__contact-item">info@devstudio.com</a></li>
+            <li ><a href="tel:+380961111111" class="mobile-menu__contact-item">+38 096 111 11 11</a></li>
+        </ul>
+        <ul class="list mobile-menu__social">
+            <li><a href="#" class="mobile-menu__social-item">Instagram</a><span class="vl"></span></li>
+            <li><a href="#" class="mobile-menu__social-item">Twitter</a><span class="vl"></span></li>
+            <li><a href="#" class="mobile-menu__social-item">Facebook</a><span class="vl"></span></li>
+            <li><a href="#" class="mobile-menu__social-item">LinkedIn</a></li>
+        </ul>
     </div>
+   </div>
 </header>
 <!--main-->
 <main>
     <!--one-->
-    <section class="section-service overlay"> 
+     <section class="section-service overlay section"> 
         <div class="container">
         <h1 class="section-title">Ефективні рішення для <br> вашого бізнесу</h1>
         <button type="button" class="button-service" data-modal-open>Замовити послугу</button>
-       
-        </div>
+       </div>
     </section>
     <!--text-->
     <section class="advantage section">
         <div class="container">
         <h2 class="visually-hidden">Перевага</h2>
         <ul class="adv-list">
-            <li>
+            <li class="adv-item">
                <div class="svg-icon"><svg class="icon-item" width="70" height="70">
                 <use href="./img/icons.svg#icon-antenna"></use>
             </svg></div>
                 <h3 class="adv-title">Увага до деталей</h3>
                 <p class="title-mean">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
             </li>
-            <li>
+            <li class="adv-item">
                 <div class="svg-icon"><svg class="icon-item" width="70" height="70">
                     <use href="./img/icons.svg#icon-clock"></use>
                 </svg></div>
                 <h3 class="adv-title">Пунктуальність</h3>
                 <p class="title-mean">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
             </li>
-            <li>
+            <li class="adv-item">
                 <div class="svg-icon"><svg class="icon-item" width="70" height="70">
                     <use href="./img/icons.svg#icon-diagram"></use>
                 </svg></div>
                 <h3 class="adv-title">Планування</h3>
                 <p class="title-mean">Так само консультація з широким активом значною мірою зумовлює.</p>
             </li>
-            <li>
+            <li class="adv-item">
                 <div class="svg-icon"><svg class="icon-item" width="70" height="70">
                     <use href="./img/icons.svg#icon-astronaut"></use>
                 </svg></div>
@@ -85,7 +115,7 @@
     <!--whatwedoing-->
     <section class="example section">
         <div class="container">
-        <h2 class="example__title">Чим ми займаємося</h2>
+        <h2 class="example-title">Чим ми займаємося</h2>
         <ul class="img-example">
             <li class="img-example__list"><img src="./img/box1.jpg" alt="computer" width="370"><p class="img-example__description">Десктопні додатки</p></li>
             <li class="img-example__list"><img src="./img/box2.jpg" alt="notebook" width="370"><p class="img-example__description">Мобільні додатки</p></li>
@@ -98,7 +128,19 @@
         <div class="container">
         <h2 class="team-title">Наша команда</h2>
         <ul class="card-team">
-            <li class="card-list"><img src="./img/img.jpg" alt="Ігор Дем'яненко" width="270">
+            <li class="card-list">
+                <picture>
+                    <source srcset="./img/img-d.jpg 1x, ./img/img-d@2x.jpg 2x " media="(min-width:1200px)"/>
+                    <source srcset="./img/img-d.webp 1x, ./img/img-d@2x.webp 2x " media="(min-width:1200px)"
+                    type="image/webp"/>
+                    <source srcset="./img/img-t.jpg 1x, ./img/img-t-@2x.jpg 2x " media="(min-width: 768px)"/>
+                    <source srcset="./img/img-t.webp 1x, ./img/img-t-@2x.webp 2x" media="(min-width: 768px)" 
+                    type="image/webp"/>
+                    <source srcset="./img/img.jpg 1x, ./img/img-@2x.jpg" media="(max-width: 767px)"/>
+                    <source srcset="/img/img.webp 1x, /img/img-@2x.webp" media="(max-width: 767px)"
+                     type="image/webp"/>
+                    <img src="./img/img.jpg" alt="Ігор Дем'яненко"/>
+                </picture>
                 <div class="list-description">
                     <h3 class="name">Ігор Дем'яненко</h3>
                 <p class="office">Product Designer</p>
@@ -134,7 +176,13 @@
             </ul>
             </div>
             </li>
-            <li class="card-list"><img src="./img/img2.jpg" alt="Ольга Рєпіна" width="270">
+            <li class="card-list">
+                <picture>
+                    <source srcset="./img/img-2-d.jpg 1x, ./img/.img-2-d@2x.jpg 2x" media="(min-width:1200px)">
+                    <source srcset="./img/img-2-t.jpg 1x, ./img/.img-2-t@2x.jpg 2x" media="(min-width:768px)">
+                    <source srcset="./img/img-2.jpg 1x, ./img/.img-2-@2x.jpg 2x" media="(max-width:767px)">
+             </picture>
+             <img src="./img/img-2.jpg" alt="Ольга Рєпіна">
             <div class="list-description">
                 <h3 class="name">Ольга Рєпіна</h3>
                 <p class="office">Frontend Developer</p>
@@ -170,8 +218,15 @@
             </ul>
         </div>
             </li>
-            <li class="card-list"><img src="./img/img3.jpg" alt="Микола Тарасов" width="270">
-                <div class="list-description">
+            <li class="card-list">
+            <picture>
+                <source srcset="./img/img3-d.jpg 1x, ./img/.img3-d@2x.jpg 2x" media="(min-width:1200px)"/>
+                <source srcset="./img/img3-t.jpg 1x, ./img/.img3-t@2x.jpg 2x" media="(min-width:768px)"/>
+                <source srcset="./img/img3.jpg 1x, ./img/.img3-@2x.jpg 2x" media="(max-width:767px)"/>
+                
+            </picture>
+            <img src="./img/img-3.jpg" alt="Микола Тарасов"/>
+              <div class="list-description">
                     <h3 class="name">Микола Тарасов</h3>
                 <p class="office">Marketing</p>
             <ul class="social-list">
@@ -206,7 +261,13 @@
             </ul>
             </div>
             </li>
-            <li class="card-list"><img src="./img/img4.jpg" alt="Михайло Єрмаков" width="270">
+            <li class="card-list">
+                <picture>
+                    <source srcset="./img/img4-d.jpg 1x, ./img/.img4-d@2x.jpg 2x" media="(min-width:1200px)"/>
+                    <source srcset="./img/img4-t.jpg 1x, ./img/.img4-t@2x.jpg 2x" media="(min-width:768px)"/>
+                    <source srcset="./img/img4.jpg 1x, ./img/.img4-@2x.jpg 2x" media="(max-width:767px)"/>
+                </picture>
+                <img src="img/img4.jpg" alt="Михайло Єрмаков"/>
                 <div class="list-description"><h3 class="name">Михайло Єрмаков</h3>
                 <p class="office">UI Designer</p>
             <ul class="social-list">
@@ -303,7 +364,7 @@
         <div class="adres-link">
     <a href="./index.html" class="logo footer-logo">Web<span class="studiofooter">Studio</span></a>
     <address>
-        <ul>
+        <ul class="adress-list">
             <li class="list-footer"><a href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank" rel="noopener noreferrer"
                     class="address-contact">м. Київ, пр-т Лесі
                     Українки, 26</a></li>
@@ -312,7 +373,7 @@
         </ul>
     </address>
     </div>
-    <div class="flexdiv">
+    <div class="footer-social">
         <p class="connect">приєднуйтесь</p>
         <ul class="footer-list">
             <li class="footer-item">
@@ -345,22 +406,30 @@
             </li>
         </ul>
         </div>
-        <form class="footer-form">
-            <label class="footer-subs">Підпишіться на розсилку</label>
-            <div class="footer-email"><input type="email" name="user-email" placeholder="E-mail" class="input-footer_email">
-            <div class="icon-cointainer"><button class="btn-subs">Підписатися</button>
-            <svg class="foot-icon" aria-label="icon send" width="24" height="24">
-                <use href="./img/icons.svg#icon-send"></use>
-            </svg>
+        
+           
+            <form class="subscribe-form">
+                <p class="footer-subs">Підпишіться на розсилку</p>
+                <div class="footer-form">
+              <input
+                type="email"
+                name="subscribe-mail"
+                class="input-footer_email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="btn-subs button">
+                <span class="subs">Підписатися</span
+                ><svg width="24" height="24"><use href="./img/icons.svg#icon-send"></use></svg>
+              </button>
+            </div>
+            </form>
         </div>
-    </form>
-    </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
     <div class="modal"><button class="modal-btn" data-modal-close><svg class="icon icon-vector">
         <use href="./img/icons.svg#icon-vector"></use>
     </svg></button>
-    <!-- bvbvhjb -->
+    <!-- hhfd -->
    <form class="modal-form">
     <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
     <label class="form-field"><span class="form-label">Ім'я</span><div class="form-div"><input type="text" name="user-name" class="form-input" required pattern="[a-zA-Zа-яА-ЯіІїЇ`ʼ]+" placeholder="Artem"><svg class="form-icon" aria-label="icon-person"  width="18" height="18" >
@@ -380,12 +449,14 @@
     <label  class="modal-form-field">
     <input type="checkbox" name="checkbox" class="modal-form-checkbox visually-hidden" required><svg class="modal-form-check" width="11" height="8">
         <use href="./img/icons.svg#icon-check" class="modal-form-check-icon"></use>
-    </svg>Погоджуюся з розсилкою та приймаю &nbsp<a href="#" class="policy-link">Умови договору</a>
+    </svg>Погоджуюся з розсилкою та приймаю &nbsp
+    <a href="#" class="policy-link">Умови договору</a>
 </label>
     <button type="submit" class="modal-btn_submit">Відправити</button>
 </form>
 </div>
 </div>
-<script src="./js/modal.js"></script>
+<script src="./js/modal.js"></script> 
+<script src="./js/menu.js"></script>
 </body>
 </html>
